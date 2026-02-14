@@ -1,173 +1,112 @@
 <!DOCTYPE html>
-<html lang="th"><head>
+
+<html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Emergency Medical One-Page | Medical Summary for ER Situations</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;600;700&amp;family=Noto+Sans+Thai:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<style type="text/tailwindcss">
-        :root {
-            --bg-dark: #0f172a;--text-primary: #f8fafc;--text-secondary: #94a3b8;
-            --accent-red: #B22222;
-            --border-color: #1e293b;
-        }
-        body {
-            font-family: 'Noto Sans Thai', sans-serif;
-            color: var(--text-primary);
-            background-color: var(--bg-dark);
-            background-image: 
-                radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0);
-            background-size: 40px 40px;
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            font-family: 'IBM Plex Sans Thai', sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-        }
-        .max-content-width {
-            max-width: 720px;
-        }
-        .clinical-card {
-            background: rgba(30, 41, 59, 0.4);
-            border-left: 3px solid var(--accent-red);
-            backdrop-filter: blur(4px);
-        }
-        .list-item-bullet::before {
-            content: "•";
-            margin-right: 0.75rem;
-            color: var(--accent-red);
-            font-weight: bold;
-        }
-        .section-divider {
-            border-bottom: 1px solid var(--border-color);
-            position: relative;
-        }
-        .section-divider::after {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 40px;
-            height: 1px;
-            background: var(--accent-red);
-        }
-        .data-grid-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.8));
-            pointer-events: none;
-            z-index: -1;
-        }
-    </style>
-</head>
-<body class="antialiased min-h-screen">
-<div class="data-grid-overlay"></div>
-<main class="mx-auto px-6 py-20 md:py-32 max-content-width" data-purpose="landing-page-container">
+<style data-purpose="typography">@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&family=Sarabun:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', 'Sarabun', sans-serif;
+      color: #1A1A1A;
+      background-color: #FFFFFF;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', 'Sarabun', serif;
+      letter-spacing: -0.02em;
+    }</style>
+<style data-purpose="layout-refinements">
+    .max-content-width {
+      max-width: 680px;
+    }
+    .list-item-bullet::before {
+      content: "•";
+      margin-right: 0.75rem;
+      color: #A0AEC0;
+    }
+  </style>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3RWX5V85DV"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3RWX5V85DV');
+</script></head>
+<body class="antialiased">
+<!-- BEGIN: MainContent -->
+<main class="mx-auto px-6 py-20 md:py-32 max-content-width" data-purpose="landing-page-container"><div class="flex justify-center mb-12 text-[#D32F2F] opacity-80">
+<svg class="w-12 h-12" fill="currentColor" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"></path>
+</svg>
+</div>
+<!-- BEGIN: Outcome -->
 <section class="mb-24" data-purpose="hero-section" id="outcome">
-<h1 class="text-4xl md:text-5xl mb-6 leading-tight text-white">
-                ให้หมอเข้าใจข้อมูลคุณในไม่กี่วินาที — แม้ในยามที่คุณพูดไม่ได้
-            </h1>
-<p class="text-xl md:text-2xl text-slate-400 font-light max-w-2xl">
-                สรุปข้อมูลทางการแพทย์ฉุกเฉินในหน้าเดียว ออกแบบมาเพื่อสถานการณ์ในห้องฉุกเฉินจริง
-            </p>
+<h1 class="text-4xl md:text-5xl font-semibold mb-6 leading-tight">ให้หมอเข้าใจข้อมูลคุณในไม่กี่วินาที — <span class="text-[#D32F2F]">แม้ในยามที่คุณพูดไม่ได้</span></h1>
+<p class="text-xl md:text-2xl text-gray-600 font-light">สรุปข้อมูลทางการแพทย์ฉุกเฉินในหน้าเดียว ออกแบบมาเพื่อสถานการณ์ในห้องฉุกเฉินจริง</p>
 </section>
-<section class="mb-20" data-purpose="problem-identification" id="problem">
-<h2 class="text-xl uppercase tracking-wider text-slate-500 mb-8 section-divider pb-2">ในสถานการณ์ฉุกเฉิน:</h2>
-<ul class="space-y-4 text-lg text-slate-300">
-<li class="flex items-start"><span class="list-item-bullet"></span><span>คนไข้ไม่สามารถอธิบายประวัติของตนเองได้อย่างชัดเจน</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>ญาติอาจไม่ทราบรายการยาที่ใช้เป็นประจำ</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>แพทย์ต้องตัดสินใจอย่างรวดเร็วด้วยข้อมูลที่ไม่ครบถ้วน</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>รายละเอียดเล็กๆ ที่ตกหล่นไปอาจเปลี่ยนผลลัพธ์การรักษาได้</span></li>
-</ul>
+<!-- END: Outcome -->
+<!-- BEGIN: Problem -->
+<section class="mb-20 border-l-2" data-purpose="problem-identification" id="problem" style="border-color: #D32F2F; padding-left: 1.5rem;">
+<h2 class="text-2xl font-semibold mb-8 border-b border-gray-100 pb-2">ในสถานการณ์ฉุกเฉิน:</h2>
+<ul class="space-y-4 text-lg text-gray-800"><li class="flex items-start"><span class="list-item-bullet"></span><span>คนไข้ไม่สามารถอธิบายประวัติของตนเองได้อย่างชัดเจน</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>ญาติอาจไม่ทราบรายการยาที่ใช้เป็นประจำ</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>แพทย์ต้องตัดสินใจอย่างรวดเร็วด้วยข้อมูลที่ไม่ครบถ้วน</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>รายละเอียดเล็กๆ ที่ตกหล่นไปอาจเปลี่ยนผลลัพธ์การรักษาได้</span></li></ul>
 </section>
+<!-- END: Problem -->
+<!-- BEGIN: Fit -->
 <section class="mb-20" data-purpose="target-audience" id="fit">
-<h2 class="text-xl uppercase tracking-wider text-slate-500 mb-8 section-divider pb-2">สิ่งนี้เหมาะสำหรับผู้ที่:</h2>
-<ul class="space-y-4 text-lg text-slate-300 mb-10">
-<li class="flex items-start"><span class="list-item-bullet"></span><span>มีโรคประจำตัวเรื้อรัง</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>ต้องรับประทานยาเป็นประจำ</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>มีประวัติแพ้ยา</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>ดูแลพ่อแม่หรือผู้สูงอายุ</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>ต้องการการเตรียมพร้อมมากกว่าการคาดเดา</span></li>
-</ul>
-<div class="clinical-card p-6 rounded-r-md">
-<p class="text-slate-400 italic text-sm">หมายเหตุ: หากคุณเชื่อว่า 'ค่อยไปแก้ปัญหาเมื่อมันเกิดขึ้น' สิ่งนี้อาจไม่เหมาะสำหรับคุณ</p>
+<h2 class="text-2xl font-semibold mb-8 border-b border-gray-100 pb-2">สิ่งนี้เหมาะสำหรับผู้ที่:</h2>
+<ul class="space-y-4 text-lg text-gray-800 mb-8"><li class="flex items-start"><span class="list-item-bullet"></span><span>มีโรคประจำตัวเรื้อรัง</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>ต้องรับประทานยาเป็นประจำ</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>มีประวัติแพ้ยา</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>ดูแลพ่อแม่หรือผู้สูงอายุ</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>ต้องการการเตรียมพร้อมมากกว่าการคาดเดา</span></li></ul>
+<div class="bg-gray-50 p-6 rounded-sm border-l-4 border-gray-300">
+<p class="text-gray-600 italic">หมายเหตุ: หากคุณเชื่อว่า 'ค่อยไปแก้ปัญหาเมื่อมันเกิดขึ้น' สิ่งนี้อาจไม่เหมาะสำหรับคุณ</p>
 </div>
 </section>
-<section class="mb-20" data-purpose="how-it-works" id="flow">
-<h2 class="text-xl uppercase tracking-wider text-slate-500 mb-8 section-divider pb-2">ขั้นตอนการทำงาน:</h2>
-<ol class="space-y-6 text-lg text-slate-300 mb-10">
-<li class="flex items-start">
-<span class="font-bold mr-4 text-red-700/50">01.</span>
-<span>กรอกข้อมูลที่ทราบไว้ล่วงหน้า</span>
-</li>
-<li class="flex items-start">
-<span class="font-bold mr-4 text-red-700/50">02.</span>
-<span>พิมพ์ออกมาหรือเก็บไว้ในที่ที่เข้าถึงง่าย</span>
-</li>
-<li class="flex items-start">
-<span class="font-bold mr-4 text-red-700/50">03.</span>
-<span>ส่งให้เจ้าหน้าที่ทางการแพทย์เมื่อเกิดเหตุฉุกเฉิน</span>
-</li>
-</ol>
-<div class="p-4 border border-dashed border-red-900/50 rounded bg-red-950/10">
-<p class="text-lg font-semibold text-[var(--accent-red)]">
-                    ไม่มีระบบซับซ้อน ไม่ต้องลงชื่อเข้าใช้ ไม่ต้องเริ่มต้นเรียนรู้ใหม่ แค่หน้าเดียวจบ
-                </p>
-</div>
+<!-- END: Fit -->
+<!-- BEGIN: Flow -->
+<section class="mb-20 border-l-2" data-purpose="how-it-works" id="flow" style="border-color: #D32F2F; padding-left: 1.5rem;">
+<h2 class="text-2xl font-semibold mb-8 border-b border-gray-100 pb-2">ขั้นตอนการทำงาน:</h2>
+<ol class="space-y-4 text-lg text-gray-800 mb-8"><li class="flex items-start"><span class="font-medium mr-4 text-gray-400">01.</span><span>กรอกข้อมูลที่ทราบไว้ล่วงหน้า</span></li><li class="flex items-start"><span class="font-medium mr-4 text-gray-400">02.</span><span>พิมพ์ออกมาหรือเก็บไว้ในที่ที่เข้าถึงง่าย</span></li><li class="flex items-start"><span class="font-medium mr-4 text-gray-400">03.</span><span>ส่งให้เจ้าหน้าที่ทางการแพทย์เมื่อเกิดเหตุฉุกเฉิน</span></li></ol>
+<p class="text-xl font-medium" style="color: #D32F2F;">ไม่มีระบบซับซ้อน ไม่ต้องลงชื่อเข้าใช้ ไม่ต้องเริ่มต้นเรียนรู้ใหม่ แค่หน้าเดียวจบ</p>
 </section>
+<!-- END: Flow -->
+<!-- BEGIN: Credit -->
 <section class="mb-20" data-purpose="authority-statement" id="credit">
-<div class="py-8 border-y border-slate-800">
-<p class="text-slate-500 text-sm leading-relaxed text-center">
-                    เอกสารนี้จัดทำขึ้นโดยอ้างอิงจากการสื่อสารระหว่างคนไข้และคำแนะนำจากบุคลากรทางการแพทย์มืออาชีพ จุดประสงค์เดียวคือช่วยให้แพทย์เห็นข้อมูลสำคัญได้อย่างรวดเร็ว
-                </p>
+<div class="py-8 border-y border-gray-100">
+<p class="text-gray-600 text-base leading-relaxed">เอกสารนี้จัดทำขึ้นโดยอ้างอิงจากการสื่อสารระหว่างคนไข้และคำแนะนำจากบุคลากรทางการแพทย์มืออาชีพ จุดประสงค์เดียวคือช่วยให้แพทย์เห็นข้อมูลสำคัญได้อย่างรวดเร็ว</p>
 </div>
 </section>
+<!-- END: Credit -->
+<!-- BEGIN: Goldilocks -->
 <section class="mb-24" data-purpose="scope-clarity" id="goldilocks">
 <div class="grid md:grid-cols-2 gap-12">
 <div>
-<h2 class="text-lg font-bold mb-6 text-white flex items-center">
-<span class="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
-                        สิ่งที่คุณจะได้รับ:
-                    </h2>
-<ul class="space-y-3 text-sm text-slate-400">
-<li class="flex items-start"><span class="list-item-bullet"></span><span>ไฟล์ PDF หน้าเดียว</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>โครงสร้างข้อมูลที่เน้นความสำคัญอันดับแรกสำหรับเหตุฉุกเฉิน</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>สามารถแก้ไขข้อมูลได้ก่อนสั่งพิมพ์</span></li>
-</ul>
+<h2 class="text-xl font-semibold mb-6 text-gray-900">สิ่งที่คุณจะได้รับ:</h2>
+<ul class="space-y-3 text-gray-700"><li class="flex items-start"><span class="list-item-bullet"></span><span>ไฟล์ PDF หน้าเดียว</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>โครงสร้างข้อมูลที่เน้นความสำคัญอันดับแรกสำหรับเหตุฉุกเฉิน</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>สามารถแก้ไขข้อมูลได้ก่อนสั่งพิมพ์</span></li></ul>
 </div>
 <div>
-<h2 class="text-lg font-bold mb-6 text-white flex items-center">
-<span class="w-1.5 h-1.5 bg-red-500 rounded-full mr-2"></span>
-                        สิ่งที่คุณจะไม่ได้รับ:
-                    </h2>
-<ul class="space-y-3 text-sm text-slate-400">
-<li class="flex items-start"><span class="list-item-bullet"></span><span>การตรวจทานข้อมูลทางการแพทย์ส่วนบุคคล</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>การให้คำปรึกษาเป็นรายบุคคล</span></li>
-<li class="flex items-start"><span class="list-item-bullet"></span><span>การปรับแต่งเฉพาะสำหรับโรคใดโรคหนึ่ง</span></li>
-</ul>
+<h2 class="text-xl font-semibold mb-6 text-gray-900">สิ่งที่คุณจะไม่ได้รับ:</h2>
+<ul class="space-y-3 text-gray-700"><li class="flex items-start"><span class="list-item-bullet"></span><span>การตรวจทานข้อมูลทางการแพทย์ส่วนบุคคล</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>การให้คำปรึกษาเป็นรายบุคคล</span></li><li class="flex items-start"><span class="list-item-bullet"></span><span>การปรับแต่งเฉพาะสำหรับโรคใดโรคหนึ่ง</span></li></ul>
 </div>
 </div>
-<p class="mt-8 text-xs text-slate-600 italic text-center uppercase tracking-widest">
-                ออกแบบมาเพื่อการใช้งานพื้นฐานโดยไม่ต้องมีการสนับสนุนต่อเนื่อง
-            </p>
+<p class="mt-8 text-sm text-gray-500 italic">ออกแบบมาเพื่อการใช้งานพื้นฐานโดยไม่ต้องมีการสนับสนุนต่อเนื่อง</p>
 </section>
+<!-- END: Goldilocks -->
+<!-- BEGIN: CTA -->
 <section class="text-center pb-20" data-purpose="call-to-action" id="cta">
-<a class="inline-block text-white font-bold py-5 px-12 rounded-sm shadow-2xl transition-all duration-300 text-lg hover:brightness-110 active:scale-95 border-b-4 border-red-900"
-   href="https://drive.google.com/file/d/1dRCXYlc-PLk9a2Qyt-RELbBfitB98EV-/view?usp=drive_link"
-   target="_blank"
-   rel="noopener noreferrer"
-   style="background-color: var(--accent-red);">
-   ดาวน์โหลดข้อมูลการแพทย์ฉุกเฉิน (หน้าเดียว)
-</a>
-
+<a class="inline-block text-white font-medium py-5 px-10 rounded shadow-sm transition-colors duration-200 text-lg hover:opacity-90" href="https://drive.google.com/file/d/1dRCXYlc-PLk9a2Qyt-RELbBfitB98EV-/view?usp=drive_link" style="background-color: #D32F2F;">ดาวน์โหลดข้อมูลการแพทย์ฉุกเฉิน (หน้าเดียว)</a><div class="mt-8 flex justify-center gap-6 text-xs text-gray-400 font-light"><div class="flex flex-col items-center gap-6">
+<p class="text-xs text-gray-400 font-light">Developed by Namthip | FB: Krittiyabhorn Kongtanawanich</p>
+<div class="flex gap-4 text-xs font-medium">
+<a class="px-3 py-1.5 rounded transition-colors bg-orange-100 text-orange-800" href="https://kuchikinamthip.github.io/NamthipService/Main.html">Back to 'Namthip Service'</a>
+<a class="px-3 py-1.5 rounded transition-colors bg-orange-100 text-orange-800" href="https://kuchikinamthip.github.io/">About Namthip</a>
+</div>
+</div></div>
 </section>
+<!-- END: CTA -->
 </main>
-<footer class="border-t border-slate-900 py-12 text-center text-xs text-slate-600" data-purpose="footer">
-<p class="tracking-widest uppercase">© Emergency Medical One-Page. ออกแบบมาเพื่อการใช้งานจริง</p>
+<!-- END: MainContent -->
+<!-- BEGIN: Footer -->
+<footer class="border-t border-gray-50 py-12 text-center text-xs text-gray-400" data-purpose="footer">
+<p>© Emergency Medical One-Page. ออกแบบมาเพื่อการใช้งานจริง</p>
 </footer>
-
+<!-- END: Footer -->
 </body></html>
