@@ -94,11 +94,24 @@
 <!-- END: Goldilocks -->
 <!-- BEGIN: CTA -->
 <section class="text-center pb-20" data-purpose="call-to-action" id="cta">
-<a class="inline-block text-white font-medium py-5 px-10 rounded shadow-sm transition-colors duration-200 text-lg hover:opacity-90" href="https://drive.google.com/file/d/1dRCXYlc-PLk9a2Qyt-RELbBfitB98EV-/view?usp=drive_link" style="background-color: #D32F2F;">ดาวน์โหลดข้อมูลการแพทย์ฉุกเฉิน (หน้าเดียว)</a><div class="mt-8 flex justify-center gap-6 text-xs text-gray-400 font-light"><div class="flex flex-col items-center gap-6">
+<a id="btn-download"
+class="inline-block text-white font-medium py-5 px-10 rounded shadow-sm transition-colors duration-200 text-lg hover:opacity-90"
+href="https://drive.google.com/file/d/1dRCXYlc-PLk9a2Qyt-RELbBfitB98EV-/view?usp=drive_link">
+ดาวน์โหลดข้อมูลการแพทย์ฉุกเฉิน (หน้าเดียว)
+</a>
+<div class="mt-8 flex justify-center gap-6 text-xs text-gray-400 font-light"><div class="flex flex-col items-center gap-6">
 <p class="text-xs text-gray-400 font-light">Developed by Namthip | FB: Krittiyabhorn Kongtanawanich</p>
 <div class="flex gap-4 text-xs font-medium">
-<a class="px-3 py-1.5 rounded transition-colors bg-orange-100 text-orange-800" href="https://kuchikinamthip.github.io/NamthipService/Main.html">Back to 'Namthip Service'</a>
-<a class="px-3 py-1.5 rounded transition-colors bg-orange-100 text-orange-800" href="https://kuchikinamthip.github.io/">About Namthip</a>
+<a id="btn-service"
+class="px-3 py-1.5 rounded transition-colors bg-orange-100 text-orange-800"
+href="https://kuchikinamthip.github.io/NamthipService/Main.html">
+Back to 'Namthip Service'
+</a>
+<a id="btn-about"
+class="px-3 py-1.5 rounded transition-colors bg-orange-100 text-orange-800"
+href="https://kuchikinamthip.github.io/">
+About Namthip
+</a>
 </div>
 </div></div>
 </section>
@@ -110,4 +123,26 @@
 <p>© Emergency Medical One-Page. ออกแบบมาเพื่อการใช้งานจริง</p>
 </footer>
 <!-- END: Footer -->
+ <script>
+document.getElementById("btn-download").addEventListener("click", function() {
+  gtag("event", "click_download_emergency_pdf", {
+    event_category: "CTA",
+    event_label: "Emergency One Page Download"
+  });
+});
+
+document.getElementById("btn-service").addEventListener("click", function() {
+  gtag("event", "click_back_to_service", {
+    event_category: "Navigation",
+    event_label: "Back to Namthip Service"
+  });
+});
+
+document.getElementById("btn-about").addEventListener("click", function() {
+  gtag("event", "click_about_namthip", {
+    event_category: "Navigation",
+    event_label: "About Namthip"
+  });
+});
+</script>
 </body></html>
