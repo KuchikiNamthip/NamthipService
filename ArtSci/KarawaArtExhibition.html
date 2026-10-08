@@ -500,6 +500,29 @@
     .marquee-item{ white-space: normal; text-align: center; padding: 0 24px; font-size: 17px; }
     .marquee-item::after{ display: none; }
   }
+
+  /* ---------- byline (artist credit) ---------- */
+  .hero .byline{
+    max-width: 520px;
+    margin: 6px auto 18px;
+    text-align: center;
+    font-family: 'Anuphan', sans-serif;
+    font-weight: 500;
+    font-size: clamp(9.5px, 2.4vw, 11px);
+    letter-spacing: 0.14em;
+    line-height: 1.6;
+    /* เลือกสีได้: #6F6B63 เข้ม(ชัด) · #807C74 · #8C887F (ใช้อยู่) · #9A968D · #A8A49B อ่อนสุด */
+    color: #8C887F;
+    text-wrap: balance;
+  }
+  .hero .byline::before{
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    margin: 0 auto 9px;
+    background: rgba(23,20,15,0.28);
+  }
 </style>
 </head>
 <body>
@@ -540,6 +563,7 @@
     <h2>หมอ 5 บาท และสุขภาวปัญญาจารย์มวลชนรำลึก</h2>
     <h1>KARAWA<br>ART EXHIBITION</h1>
     <div class="sub2">&amp; CREATIVE WELLBEING ART-SCIENCE WORKSHOP</div>
+    <div class="byline"><span>BY WIRAT KAMSRICHAN AND GUEST WAC ARTISTS</span></div>
     <div class="sub">A TRIBUTE TO THE TEACHERS WHO SHAPED MEDICAL ILLUSTRATION</div>
     <p class="tribute">เวชนิทัศน์วิทยศิลปกรรม สุขภาวโอสถศิลป์ ไท-สยาม <br>
        งานประเพณีรำลึก รศ.นพ.สภา ลิมพาณิชย์การและปูชนียาจารย์เวชนิทัศน์ไทย <br>
